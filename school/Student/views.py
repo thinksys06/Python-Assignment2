@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
-from .models import StudentModel,clasModel,ProfileModel
-from .serializer import StudentSerializer,clasSerializer,ProfileSerializer
+from .models import StudentModel,clasModel,ProfileModel,Images
+from .serializer import StudentSerializer,clasSerializer,ProfileSerializer,ImageSerial
 
 class StudentView(ModelViewSet):
     serializer_class=StudentSerializer
@@ -12,3 +12,6 @@ class clasView(ModelViewSet):
 class ProfileView(ModelViewSet):
     serializer_class=ProfileSerializer
     queryset=ProfileModel.objects.all()
+class ImageView(ModelViewSet):
+    serializer_class=ImageSerial
+    queryset=Images.objects.all()

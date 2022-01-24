@@ -1,3 +1,4 @@
+import profile
 from django.db import models
 #from django.db.models.fields import IntegerField
 class StudentModel(models.Model):
@@ -17,3 +18,17 @@ class ProfileModel(models.Model):
     emailid=models.EmailField()
     contactnumber=models.IntegerField()
     image=models.URLField()
+   # image1=models.URLField()
+   # image2=models.URLField()
+   # image3 = models.URLField()
+    
+class Images(models.Model):
+    Image_detail=models.OneToOneField(StudentModel,on_delete=models.CASCADE)
+    image=models.ImageField()
+    image1=models.ImageField()
+    image2=models.ImageField()
+    image3=models.ImageField()
+
+
+
+    
