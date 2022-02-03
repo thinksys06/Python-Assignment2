@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Images, StudentModel,clasModel,ProfileModel#Images
+from .models import Images, StudentModel,clasModel,ProfileModel,Images,Doc, dislike, gallery,likes,dislike
 class StudentSerializer(ModelSerializer):
     class Meta:
         model=StudentModel
@@ -15,4 +15,24 @@ class ProfileSerializer(ModelSerializer):
 class ImageSerial(ModelSerializer):
     class Meta:
         model=Images
+        fields='__all__'
+
+class DocSerial(ModelSerializer):
+    class Meta:
+        model=Doc
+        fields='__all__'
+
+class gallerySerial(ModelSerializer):
+    class Meta:
+        model=gallery
+        fields='__all__'
+
+class likesSerial(ModelSerializer):
+    class Meta:
+        model=likes
+        fields='__all__'
+
+class dislikeSerial(ModelSerializer):
+    class Meta:
+        model=dislike
         fields='__all__'
